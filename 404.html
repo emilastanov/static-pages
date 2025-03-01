@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ой! Кажется, нитка порвалась...</title>
+    <link rel="icon" type="image/png" href="https://ast.studio/public/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="https://ast.studio/public/favicon.svg" />
+    <link rel="shortcut icon" href="https://ast.studio/public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ast.studio/public/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ast.studio" />
+    <link rel="manifest" href="https://ast.studio/public/site.webmanifest" />
+    <style>
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #f8e4c4;
+            font-family: Arial, sans-serif;
+            color: #5a3d2b;
+        }
+
+        .container {
+            position: relative;
+            padding: 20px;
+        }
+
+        .embroidery {
+            font-size: 6rem;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #a0522d;
+            text-shadow:
+                    1px 1px #d7a989,
+                    2px 2px #e6c3a5,
+                    3px 3px #d7a989,
+                    4px 4px #e6c3a5;
+            animation: stitch 1.5s infinite alternate;
+        }
+
+        @keyframes stitch {
+            0% { text-shadow: 1px 1px #d7a989, 2px 2px #e6c3a5, 3px 3px #d7a989, 4px 4px #e6c3a5; }
+            100% { text-shadow: 2px 2px #c48a65, 3px 3px #d4a378, 4px 4px #c48a65, 5px 5px #d4a378; }
+        }
+
+        .message {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 10px auto;
+            line-height: 1.6;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 20px 0 16px 0;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: #a0522d;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 3px solid #7d3a1f;
+            box-shadow: 3px 3px 0px #7d3a1f;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #7d3a1f;
+            box-shadow: 2px 2px 0px #5a2a17;
+            transform: translateY(-2px);
+        }
+
+        .pattern {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 10px;
+            background: repeating-linear-gradient(
+                    45deg,
+                    #a0522d 0px,
+                    #a0522d 5px,
+                    transparent 5px,
+                    transparent 10px
+            );
+        }
+
+        .pattern-bottom {
+            bottom: 0;
+            top: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="pattern"></div>
+    <h1 class="embroidery">404</h1>
+    <p class="message">Эта страница потерялась, но настоящий стиль — вечен</p>
+    <a href="https://ast.studio" class="btn">На главную</a>
+    <div class="pattern pattern-bottom"></div>
+</div>
+</body>
+</html>

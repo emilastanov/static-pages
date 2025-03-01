@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мы скоро вернёмся — идёт обновление</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мы обновляем наш сайт, чтобы сделать его ещё лучше. Возвращайтесь позже, скоро всё будет готово!">
+  <meta name="keywords" content="обновление сайта, технические работы, скоро вернёмся">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Иконки -->
+  <link rel="icon" type="image/png" href="https://ast.studio/public/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="https://ast.studio/public/favicon.svg">
+  <link rel="shortcut icon" href="https://ast.studio/public/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://ast.studio/public/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="ast.studio">
+  <link rel="manifest" href="https://ast.studio/public/site.webmanifest">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:title" content="Мы скоро вернёмся — идёт обновление">
+  <meta property="og:description" content="Мы обновляем наш сайт, чтобы сделать его ещё лучше. Возвращайтесь позже, скоро всё будет готово!">
+  <meta property="og:image" content="https://ast.studio/public/maintenance-banner.jpg">
+  <meta property="og:url" content="https://ast.studio">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мы скоро вернёмся — идёт обновление">
+  <meta name="twitter:description" content="Мы обновляем наш сайт, чтобы сделать его ещё лучше. Возвращайтесь позже, скоро всё будет готово!">
+  <meta name="twitter:image" content="https://ast.studio/public/maintenance-banner.jpg">
+  <meta name="twitter:site" content="@ast_studio">
+
+  <style>
+    h1,p {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #f8e4c4;
+      font-family: Arial, sans-serif;
+      color: #5a3d2b;
+    }
+
+    .container {
+      position: relative;
+      padding: 20px;
+    }
+
+    .embroidery {
+      margin-top: 16px;
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 5px;
+      color: #a0522d;
+      text-shadow:
+              1px 1px #d7a989,
+              2px 2px #e6c3a5,
+              3px 3px #d7a989,
+              4px 4px #e6c3a5;
+      animation: stitch 1.5s infinite alternate;
+    }
+
+    @keyframes stitch {
+      0% { text-shadow: 1px 1px #d7a989, 2px 2px #e6c3a5, 3px 3px #d7a989, 4px 4px #e6c3a5; }
+      100% { text-shadow: 2px 2px #c48a65, 3px 3px #d4a378, 4px 4px #c48a65, 5px 5px #d4a378; }
+    }
+
+    .message {
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin: 16px auto;
+      line-height: 1.6;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .loader {
+      margin: 20px auto;
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(160, 82, 45, 0.3);
+      border-top: 5px solid #a0522d;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .pattern {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 10px;
+      background: repeating-linear-gradient(
+              45deg,
+              #a0522d 0px,
+              #a0522d 5px,
+              transparent 5px,
+              transparent 10px
+      );
+    }
+
+    .pattern-bottom {
+      bottom: 0;
+      top: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="pattern"></div>
+  <h1 class="embroidery">Ведутся работы</h1>
+  <div class="loader"></div>
+  <p class="message">Мы обновляем сайт, чтобы сделать его лучше. Возвращайтесь позже!</p>
+  <div class="pattern pattern-bottom"></div>
+</div>
+</body>
+</html>
